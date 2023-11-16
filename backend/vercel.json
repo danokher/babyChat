@@ -1,19 +1,16 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "index.js",  // El archivo principal de tu aplicación
-        "use": "@now/node"  // Tipo de construcción para Node.js
-      }
+      { "src": "./index.js", "use": "@vercel/node" }
     ],
     "routes": [
       {
-        "src": "/authenticate",  // La ruta correspondiente a tu endpoint /authenticate
-        "dest": "/index.js"  // El archivo que maneja esa ruta
+        "src": "/authenticate",
+        "dest": "/"
       },
       {
         "src": "/(.*)",
-        "dest": "/index.js"
+        "dest": "/"
       }
     ]
   }
