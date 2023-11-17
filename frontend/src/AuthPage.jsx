@@ -5,7 +5,7 @@ const AuthPage = (props) => {
       e.preventDefault();
       const { value } = e.target[0];
       axios.post(
-        'https://yoda-chat-backend2.vercel.app/authenticate',
+        'http://localhost:3001/authenticate',
         {username: value}
         )
         .then(r => props.onAuth({ ...r.data, secret: value }))
